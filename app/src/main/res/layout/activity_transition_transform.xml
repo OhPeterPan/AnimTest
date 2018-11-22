@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonTransform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button" />
+
+    <FrameLayout
+        android:id="@+id/container1"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_green_light" />
+
+    <FrameLayout
+        android:id="@+id/container2"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:background="@android:color/holo_orange_light">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_red_light"
+            android:padding="30dp"
+            android:text="你好吗"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+</LinearLayout>
