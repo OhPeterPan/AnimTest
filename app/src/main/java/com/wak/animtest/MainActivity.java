@@ -2,6 +2,8 @@ package com.wak.animtest;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
     }
+
 
     private void initView() {
         TextView tvTransitionAnim = findViewById(R.id.tvTransitionAnim);
@@ -35,5 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    /*    startActivity(new Intent(MainActivity.this, TransitionTwoActivity.class)
+                , ActivityOptions.makeSceneTransitionAnimation(this).toBundle());*/
+        Pair<TextView, String> test1 = Pair.create(tvChangeClipBounds, "test1");
+        ActivityOptionsCompat.makeSceneTransitionAnimation(this, new Pair[]{test1});
     }
 }
